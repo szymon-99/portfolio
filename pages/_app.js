@@ -1,5 +1,5 @@
-import 'tailwindcss/tailwind.css'
-import { Layout } from '../components'
+import '../global.css'
+import { Layout } from '../components/organisms'
 
 function MyApp({ Component, pageProps }) {
   return (

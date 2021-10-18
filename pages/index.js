@@ -1,4 +1,4 @@
-import { Hero, About, Portfolio } from '../components'
+import { Hero, About, Portfolio } from '../components/organisms'
 
 export default function Home() {
   return (
