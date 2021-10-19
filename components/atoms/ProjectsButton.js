@@ -9,7 +9,7 @@ const ProjectsButton = () => {
         initial='initial'
         animate='animate'
         custom={1.6}
-        href='#projects'
+        href='#portfolio'
         className='btn'
       >
         Check my projects

@@ -8,7 +8,7 @@ const TechStack = () => {
         Tech Stack
       </h4>
 
-      <ul className='grid gap-6 md:gap-8 grid-cols-3 justify-items-center'>
+      <ul className='grid gap-6 grid-cols-3 justify-items-center md:grid-cols-4'>
         {technologies.map((tech, i) => {
           return <Technology key={i} {...tech} />
         })}

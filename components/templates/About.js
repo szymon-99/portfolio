@@ -4,9 +4,9 @@ import { AboutText, TechStack } from '../organisms'
 const About = () => {
   return (
     <section id='about' className='section relative'>
-      <Title>About</Title>
+      <Title>About Me</Title>
 
-      <div className='grid lg:grid-cols-2 gap-4 md:gap-8'>
+      <div className='grid lg:grid-cols-2 gap-8 md:gap-6'>
         <AboutText />
 
         <TechStack />

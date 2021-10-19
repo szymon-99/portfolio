@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import {
   SiExpress,
   SiRedux,
@@ -7,6 +7,11 @@ import {
   SiMaterialui,
   SiTailwindcss,
   SiFramer,
+  SiGit,
+  SiNodedotjs,
+  SiReact,
+  SiJavascript,
+  SiTypescript,
 } from 'react-icons/si'
 
 const navLinks = [
@@ -15,7 +20,7 @@ const navLinks = [
     href: '#about',
   },
   {
-    label: 'portfolio',
+    label: 'projects',
     href: '#portfolio',
   },
   {
@@ -36,15 +41,18 @@ const socialLinks = [
 ]
 
 const technologies = [
-  { name: 'Express.js', icon: <SiExpress /> },
-  { name: 'React.js', icon: <FaReact /> },
-  { name: 'Node.js', icon: <FaNodeJs /> },
-  { name: 'Redux', icon: <SiRedux /> },
+  { name: 'Javascript', icon: <SiJavascript /> },
+  { name: 'Typescript', icon: <SiTypescript /> },
+  { name: 'React.js', icon: <SiReact /> },
   { name: 'Next.js', icon: <SiNextdotjs /> },
   { name: 'Gatsby.js', icon: <SiGatsby /> },
+  { name: 'Redux', icon: <SiRedux /> },
+  { name: 'Express.js', icon: <SiExpress /> },
+  { name: 'Node.js', icon: <SiNextdotjs /> },
   { name: 'Material UI', icon: <SiMaterialui /> },
-  { name: 'Tailwind css', icon: <SiTailwindcss /> },
+  { name: 'TailwindCSS', icon: <SiTailwindcss /> },
   { name: 'Framer', icon: <SiFramer /> },
+  { name: 'Git', icon: <SiGit /> },
 ]
 
 export { socialLinks, navLinks, technologies }
