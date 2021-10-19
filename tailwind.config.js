@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        wave: 'wave 2.5s linear 3',
+        wave: 'wave 2.5s linear infinite',
         spin: 'spin 5s linear infinite',
       },
       keyframes: {

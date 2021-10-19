@@ -46,4 +46,17 @@ const slideTop = {
   }),
 }
 
-export { scaleY, slideLeft, slideRight, slideTop }
+const scaleUpDown = {
+  initial: { opacity: 0 },
+  animate: (delay = 0) => ({
+    opacity: 1,
+    scale: [1, 1.3, 1],
+    transition: {
+      delay,
+      type: 'spring',
+      duration: 0.4,
+    },
+  }),
+}
+
+export { scaleY, slideLeft, slideRight, slideTop, scaleUpDown }
