@@ -1,4 +1,4 @@
-import { Hero, About, Portfolio } from '../components/organisms'
+import { Hero, About, Portfolio, Contact } from '../components/templates'
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Hero />
       <About />
       <Portfolio />
+      <Contact />
     </>
   )
 }

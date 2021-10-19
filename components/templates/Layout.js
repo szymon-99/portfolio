@@ -1,11 +1,10 @@
-import Navbar from './Navbar'
-import Footer from './Footer'
+import { Navbar, Footer } from '../organisms'
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className='page-width'>{children}</main>
+      <main className='page-width overflow-hidden'>{children}</main>
       <Footer />
     </>
   )

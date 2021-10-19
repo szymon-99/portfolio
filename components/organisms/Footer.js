@@ -1,5 +1,9 @@
 const Footer = () => {
-  return <footer className='container'>footer</footer>
+  return (
+    <footer id='contact' className='page-width'>
+      footer
+    </footer>
+  )
 }
 
 export default Footer

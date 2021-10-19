@@ -43,6 +43,7 @@ const Sidebar = ({ close }) => {
             return (
               <li key={href}>
                 <a
+                  onClick={close}
                   href={href}
                   className='block text-gray-800  py-4 px-10 hover:bg-yellow-50  '
                 >

@@ -18,10 +18,10 @@ const Portfolio = () => {
 
   return (
     <motion.section
-    // initial={{ x: 230, opacity: 0 }}
-    // animate={animationControl}
-    // ref={ref}
-    // className='container'
+      // initial={{ x: 230, opacity: 0 }}
+      // animate={animationControl}
+      // ref={ref}
+      className='section bg-blue-100'
     >
       Portfolio
       <Project />

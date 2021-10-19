@@ -1,5 +1,5 @@
 import '../global.css'
-import { Layout } from '../components/organisms'
+import { Layout } from '../components/templates'
 
 function MyApp({ Component, pageProps }) {
   return (

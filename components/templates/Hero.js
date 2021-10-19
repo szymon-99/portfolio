@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className='pt-16  md:pt-20  min-h-[700px] grid grid-rows-2 md:h-screen lg:max-h-[900px]  relative'>
       {/* background */}
-      <div className=' left-3/4 absolute inset-y-0 md:left-[55%] -right-6 bg-yellow-500/10'></div>
+      <div className='-right-6 left-3/4 absolute inset-y-0 md:left-[55%]  bg-yellow-500/10'></div>
 
       <motion.div
         variants={slideLeft}
