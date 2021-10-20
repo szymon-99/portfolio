@@ -7,11 +7,11 @@ const Hero = () => {
   return (
     <section className='page-width pt-16  md:pt-20 min-h-[700px] grid grid-rows-2 md:h-screen lg:max-h-[900px]   relative mb-14 md:mb-20'>
       {/* background */}
-      <div className='-right-4 sm:-right-8 md:-right-12 left-3/4 absolute inset-y-0 md:left-[55%]  bg-yellow-500/10'></div>
+      <div className='right-0 left-3/4 absolute inset-y-0 md:left-[55%]  bg-yellow-500/10'></div>
 
       <motion.div
         variants={slideLeft}
-        custom={0.3}
+        custom={0.4}
         initial='initial'
         animate='animate'
         className='flex flex-col justify-center md:justify-end md:pb-8 lg:pb-0'
@@ -28,7 +28,7 @@ const Hero = () => {
           variants={scaleY}
           initial='initial'
           animate='animate'
-          custom={1}
+          custom={1.2}
           className=' text-4xl sm:text-5xl lg:text-6xl font-bold uppercase text-gray-800'
         >
           Szymon Prusak
@@ -44,7 +44,7 @@ const Hero = () => {
         variants={slideRight}
         initial='initial'
         animate='animate'
-        custom={0.2}
+        custom={0.5}
         className='relative w-5/6 sm:w-3/4 h-full lg:w-[55%] justify-self-end'
       >
         <NextImage src='/hero-img.svg' layout='fill' />

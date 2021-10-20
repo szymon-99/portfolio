@@ -8,7 +8,7 @@ const ProjectsButton = () => {
         variants={scaleUpDown}
         initial='initial'
         animate='animate'
-        custom={1.6}
+        custom={1.8}
         href='#portfolio'
         className='btn-action'
       >

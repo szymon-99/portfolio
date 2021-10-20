@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <motion.header
       variants={slideTop}
-      custom={2}
+      custom={2.2}
       initial='initial'
       animate='animate'
       className='absolute inset-x-0 top-0 page-width h-16 flex items-center justify-between md:h-20 z-10 '
