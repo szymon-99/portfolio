@@ -35,7 +35,7 @@
         hover:after:scale-x-100;
   }
   .btn {
-    @apply inline-block px-4 py-1 md:px-6 md:py-2 font-semibold text-sm md:text-base uppercase rounded transition;
+    @apply inline-block px-4 py-2 md:px-6 font-semibold text-xs md:text-sm uppercase rounded transition;
   }
 }
 
