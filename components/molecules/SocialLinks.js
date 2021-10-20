@@ -10,6 +10,7 @@ const SocialLinks = () => {
           <a
             key={href}
             href={href}
+            target='_blank'
             className='text-3xl hover:scale-110 hover:text-yellow-500 text-gray-800 transition '
           >
             {icon}

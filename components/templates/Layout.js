@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className='page-width'>{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   )

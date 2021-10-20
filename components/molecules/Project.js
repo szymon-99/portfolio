@@ -27,17 +27,18 @@ const Project = ({
       variants={isOdd ? slideRight : slideLeft}
       initial='initial'
       animate={animationControls}
-      className='w-full max-w-xl lg:max-w-none lg:min-h-[24rem]
-      flex flex-col lg:flex-row lg:odd:flex-row-reverse gap-8  
-      shadow-lg rounded overflow-hidden bg-gray-50'
+      className='w-full max-w-xl lg:max-w-none
+      flex flex-col lg:flex-row lg:odd:flex-row-reverse 
+      shadow-lg rounded overflow-hidden bg-white'
     >
       {/* image */}
       <div
-        className='flex items-center 
+        className='flex items-center justify-center
       w-full h-full lg:w-[52%]'
       >
         <div
-          className='relative h-64 sm:h-80 lg:h-96 w-full 
+          className='relative pt-[56.25%] lg:pt-0 lg:h-96
+          w-full 
         rounded-md overflow-hidden'
         >
           <NextImage
@@ -53,26 +54,28 @@ const Project = ({
 
       {/* desc */}
       <div
-        className='w-full lg:w-[48%] p-4 sm:p-6 lg:p-8
-      flex flex-col justify-center gap-4'
+        className='w-full lg:w-[48%] p-4 sm:p-6 lg:p-12
+      flex flex-col justify-center'
       >
         <h4 className=' text-2xl lg:text-3xl font-semibold text-gray-800'>
-          {title}{' '}
-          <span className='lowercase ml-2 md:ml-4 text-lg md:text-xl font-light'>
-            {category}
-          </span>
+          {title}
         </h4>
+        <p className='lowercase mb-2  text-base md:text-lg font-light text-gray-800/80'>
+          {category}
+        </p>
 
         <p>{intro}</p>
 
         <div className='flex gap-6 mt-6 lg:mt-12'>
           <a
+            target='_blank'
             href={demo}
             className='btn bg-gray-800 text-gray-50 hover:bg-gray-400 hover:text-gray-800 '
           >
             live
           </a>
           <a
+            target='_blank'
             href={github}
             className='btn ring-1 ring-gray-800 text-gray-800 hover:bg-gray-400 hover:text-gray-50 hover:ring-gray-400'
           >
@@ -80,7 +83,7 @@ const Project = ({
           </a>
         </div>
 
-        <div className='flex w-3/4 gap-2 flex-wrap'>
+        <div className='flex sm:w-3/4 gap-2 flex-wrap mt-4 md:mt-6'>
           {technologies.map((tech, i) => (
             <Chip key={i} text={tech} />
           ))}

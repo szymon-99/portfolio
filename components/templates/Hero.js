@@ -5,7 +5,7 @@ import { ProjectsButton } from '../atoms'
 
 const Hero = () => {
   return (
-    <section className='pt-16  md:pt-20 min-h-[700px] grid grid-rows-2 md:h-screen lg:max-h-[900px]  relative'>
+    <section className='page-width pt-16  md:pt-20 min-h-[700px] grid grid-rows-2 md:h-screen lg:max-h-[900px]   relative mb-14 md:mb-20'>
       {/* background */}
       <div className='-right-4 sm:-right-8 md:-right-12 left-3/4 absolute inset-y-0 md:left-[55%]  bg-yellow-500/10'></div>
 
