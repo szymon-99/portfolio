@@ -48,7 +48,7 @@ const technologies = [
   { name: 'Gatsby.js', icon: <SiGatsby /> },
   { name: 'Redux', icon: <SiRedux /> },
   { name: 'Express.js', icon: <SiExpress /> },
-  { name: 'Node.js', icon: <SiNextdotjs /> },
+  { name: 'Node.js', icon: <SiNodedotjs /> },
   { name: 'Material UI', icon: <SiMaterialui /> },
   { name: 'TailwindCSS', icon: <SiTailwindcss /> },
   { name: 'Framer', icon: <SiFramer /> },
