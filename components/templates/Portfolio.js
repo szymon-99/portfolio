@@ -4,9 +4,9 @@ import { motion, useAnimation } from 'framer-motion'
 import { Title } from '../atoms'
 import { slideBottom } from '../../utils/animations'
 
-const Portfolio = () => {
+const Portfolio = ({ projects }) => {
   const animationControl = useAnimation()
-  const { inView, ref } = useInView()
+  const { inView, ref } = useInView({ threshold: 1 })
 
   if (inView) {
     animationControl.start('animate')
@@ -17,17 +17,17 @@ const Portfolio = () => {
       <motion.div
         ref={ref}
         variants={slideBottom}
-        custom={0.2}
         initial='initial'
         animate={animationControl}
       >
-        <Title>Portfolio</Title>
+        <Title>Projects</Title>
       </motion.div>
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+
+      <ul className='grid gap-16 lg:gap-24 justify-items-center'>
+        {projects.map((project, i) => (
+          <Project key={i} {...project} isOdd={Boolean(i % 2)} />
+        ))}
+      </ul>
     </section>
   )
 }

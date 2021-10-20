@@ -1,6 +1,6 @@
 const springTransition = {
   type: 'spring',
-  duration: 0.8,
+  duration: 0.9,
 }
 
 const scaleY = {

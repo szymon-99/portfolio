@@ -1,7 +1,10 @@
+import Box from '../atoms/Box'
+
 const AboutText = () => {
   return (
     <div className='flex items-center'>
-      <div className=' flex flex-col gap-2 sm:px-4'>
+      <div className=' flex flex-col gap-2 sm:px-4 relative'>
+        <Box />
         <p className='text-base md:text-lg'>
           I'm self taught
           <span className='text-purple-900 font-bold'>
@@ -48,7 +51,7 @@ const AboutText = () => {
         </p>
 
         <div className='flex justify-start mt-2 md:mt-4 '>
-          <a href='#contact' className='btn z-10'>
+          <a href='#contact' className='btn-action z-10'>
             Contact Me
           </a>
         </div>

@@ -10,7 +10,7 @@ const ProjectsButton = () => {
         animate='animate'
         custom={1.6}
         href='#portfolio'
-        className='btn'
+        className='btn-action'
       >
         Check my projects
       </motion.a>
