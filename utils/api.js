@@ -9,6 +9,7 @@ const getPortfolioData = async () => {
 
     return items
   } catch (error) {
+    console.log(error)
     return []
   }
 }
