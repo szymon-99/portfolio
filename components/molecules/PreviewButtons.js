@@ -1,7 +1,8 @@
 import { BiLinkExternal } from 'react-icons/bi'
 import { FaGithub } from 'react-icons/fa'
+import Link from 'next/link'
 
-const PreviewButtons = ({ demo, github }) => {
+const PreviewButtons = ({ demo, github, pageHref }) => {
   return (
     <>
       <a
@@ -19,12 +20,6 @@ const PreviewButtons = ({ demo, github }) => {
       >
         code
         <FaGithub size='1.5em' />
-      </a>
-      <a
-        className='btn bg-blue-500 ring-1 text-gray-50 hover:opacity-75'
-        href='#'
-      >
-        Learn more
       </a>
     </>
   )

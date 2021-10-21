@@ -28,7 +28,7 @@ const Hero = () => {
           variants={scaleY}
           initial='initial'
           animate='animate'
-          custom={1.2}
+          custom={1}
           className=' text-4xl sm:text-5xl lg:text-6xl font-bold uppercase text-gray-800'
         >
           Szymon Prusak

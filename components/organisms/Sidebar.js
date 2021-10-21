@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import { navLinks } from '../../utils/constanst'
 import { SocialLinks } from '../molecules'
+import Link from 'next/link'
 
 const sidebarTransition = { type: 'spring', duration: 0.4 }
 

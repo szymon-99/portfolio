@@ -5,10 +5,11 @@ const client = require('contentful').createClient({
 
 const getPortfolioData = async () => {
   try {
-    const { items } = await client.getEntries()
+    const { items } = await client.getEntries('project')
+
     return items
   } catch (error) {
-    console.log(error)
+    return []
   }
 }
 

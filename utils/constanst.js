@@ -13,6 +13,7 @@ import {
   SiJavascript,
   SiTypescript,
 } from 'react-icons/si'
+import * as yup from 'yup'
 
 const navLinks = [
   {
@@ -55,4 +56,14 @@ const technologies = [
   { name: 'Git', icon: <SiGit /> },
 ]
 
-export { socialLinks, navLinks, technologies }
+const contactFormSchema = yup.object({
+  name: yup.string().required('required'),
+  email: yup
+    .string()
+    .email('Please provide valid email address')
+    .required('required'),
+  title: yup.string().required('required'),
+  message: yup.string().required('required'),
+})
+
+export { socialLinks, navLinks, technologies, contactFormSchema }

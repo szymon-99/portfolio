@@ -2,12 +2,13 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { slideLeft, slideRight } from '../../utils/animations'
 import NextImage from 'next/image'
-import { Chip } from '../atoms'
 import PreviewButtons from './PreviewButtons'
+import { Chip } from '../atoms'
 
 const Project = ({
   title,
   image,
+  id,
   technologies,
   github,
   demo,
@@ -30,17 +31,17 @@ const Project = ({
       animate={animationControls}
       className='w-full max-w-xl lg:max-w-none
       flex flex-col lg:flex-row lg:odd:flex-row-reverse 
-      shadow-lg rounded overflow-hidden bg-white'
+       rounded overflow-hidden shadow-lg bg-white lg:min-h-[26rem]
+       gap:4 lg:p-8 lg:gap-8 '
     >
       {/* image */}
       <div
         className='flex items-center justify-center
-      w-full h-full lg:w-[52%]'
+      w-full h-full lg:w-[56%]'
       >
         <div
           className='relative pt-[56.25%] lg:pt-0 lg:h-96
-          w-full 
-        rounded-md overflow-hidden'
+          w-full lg:rounded-md overflow-hidden '
         >
           <NextImage
             placeholder='blur'
@@ -48,27 +49,37 @@ const Project = ({
             src={`https:${file.url}`}
             alt={alt}
             layout='fill'
-            className='object-cover  '
+            className=' object-cover'
           />
         </div>
       </div>
 
       {/* desc */}
       <div
-        className='w-full lg:w-[48%] p-4 sm:p-6 lg:p-12
-      flex flex-col justify-center'
+        className='w-full lg:w-[44%]
+      flex flex-col justify-between p-6 sm:p-8 lg:p-4 '
       >
-        <h4 className=' text-3xl lg:text-4xl font-semibold text-gray-800'>
-          {title}
-        </h4>
-        <p className='lowercase mb-4  text-base md:text-lg font-light text-gray-800/80'>
-          {category}
-        </p>
+        <div>
+          <h4 className=' text-3xl lg:text-4xl font-medium text-gray-800'>
+            {title}
+          </h4>
+          <p className='lowercase mb-4 lg:mb-6  text-base md:text-lg font-light text-gray-800/80'>
+            {category}
+          </p>
 
-        <p>{intro}</p>
+          <p>{intro}</p>
+        </div>
 
-        <div className='flex gap-6 mt-6 lg:mt-12 flex-wrap'>
-          <PreviewButtons demo={demo} github={github} />
+        <div>
+          <div className='flex gap-4 sm:gap-6  mt-6 lg:mt-12 '>
+            <PreviewButtons demo={demo} github={github} pageHref={id} />
+          </div>
+
+          <div className='flex flex-wrap lg:w-3/4 mt-4 gap-2'>
+            {technologies.map((tech, i) => (
+              <Chip text={tech} key={i} />
+            ))}
+          </div>
         </div>
       </div>
     </motion.article>
