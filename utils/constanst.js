@@ -37,7 +37,7 @@ const socialLinks = [
   },
   {
     icon: <FaLinkedin />,
-    href: 'https://www.linkedin.com/',
+    href: 'https://www.linkedin.com/in/szymon-prusak-8984a9224/',
   },
 ]
 
