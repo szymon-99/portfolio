@@ -11,7 +11,7 @@ const Alert = ({ type, children }) => {
       exit={{ opacity: 0 }}
       className={`p-2  rounded-md text-gray-800 font-medium
         ${type === 'error' && 'bg-red-200'}
-        ${type === 'success' && 'bg-green-300'}`}
+        ${type === 'success' && 'bg-green-200'}`}
     >
       {children}
     </motion.div>

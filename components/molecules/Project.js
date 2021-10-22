@@ -1,9 +1,10 @@
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { slideLeft, slideRight } from '../../utils/animations'
+import { slideLeft, slideRight, slideBottom } from '../../utils/animations'
 import NextImage from 'next/image'
 import PreviewButtons from './PreviewButtons'
 import { Chip } from '../atoms'
+import { useState, useEffect } from 'react'
 
 const Project = ({
   title,
@@ -16,17 +17,18 @@ const Project = ({
   intro,
   isOdd,
 }) => {
-  const { inView, ref } = useInView({ threshold: 0.6 })
+  const { inView, ref } = useInView({ threshold: 0.4 })
   const animationControls = useAnimation()
   const { file, description: alt } = image.fields
 
   if (inView) {
     animationControls.start('animate')
   }
+
   return (
     <motion.article
       ref={ref}
-      variants={isOdd ? slideRight : slideLeft}
+      variants={isOdd ? slideLeft : slideRight}
       initial='initial'
       animate={animationControls}
       className='w-full max-w-xl lg:max-w-none

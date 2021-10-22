@@ -1,6 +1,6 @@
 const springTransition = {
   type: 'spring',
-  duration: 0.9,
+  duration: 0.8,
 }
 
 const scaleY = {
@@ -16,7 +16,7 @@ const scaleY = {
 }
 
 const slideLeft = {
-  initial: { x: -50, opacity: 0 },
+  initial: { x: -30, opacity: 0 },
   animate: (delay = 0) => ({
     x: 0,
     opacity: 1,
@@ -25,7 +25,7 @@ const slideLeft = {
 }
 
 const slideRight = {
-  initial: { x: 50, opacity: 0 },
+  initial: { x: 30, opacity: 0 },
   animate: (delay = 0) => ({
     x: 0,
     opacity: 1,

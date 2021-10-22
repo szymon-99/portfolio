@@ -1,9 +1,10 @@
 import { useForm, FormProvider } from 'react-hook-form'
 import { useState, useEffect } from 'react'
-import { Input, Textarea, Alert } from '../atoms'
+import { Input, Textarea } from '../molecules'
+import { Alert } from '../atoms'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { contactFormSchema } from '../../utils/constanst'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 
 const Form = () => {
   const methods = useForm({
@@ -51,34 +52,36 @@ const Form = () => {
   }, [isSuccess, isError])
 
   return (
-    <FormProvider {...methods}>
-      <motion.form
-        layout
-        onSubmit={handleSubmit(submitHandler)}
-        className='grid gap-4 max-w-sm w-full'
-      >
-        <Input name='name' />
-        <Input name='email' />
-        <Input name='title' />
-
-        <Textarea name='message' />
-
-        <AnimatePresence exitBeforeEnter>
-          {isError && <Alert type='error'>Sorry, something went wrong</Alert>}
-          {isSuccess && (
-            <Alert type='success'>Success! Thank you for your message</Alert>
-          )}
-        </AnimatePresence>
-
-        <button
-          type='submit'
-          disabled={isSubmitting}
-          className='btn  hover:opacity-75 focus-visible:ring-gray-800  px-3 text-base mt-2  transition bg-yellow-500 disabled:opacity-50'
+    <AnimateSharedLayout>
+      <FormProvider {...methods}>
+        <motion.form
+          layout
+          onSubmit={handleSubmit(submitHandler)}
+          className='grid gap-10 max-w-sm rounded w-full p-8 lg:p-12 shadow-md  bg-gray-300/10'
         >
-          Submit
-        </button>
-      </motion.form>
-    </FormProvider>
+          <Input name='name' />
+          <Input name='email' />
+          <Input name='title' />
+
+          <Textarea name='message' />
+
+          <AnimatePresence exitBeforeEnter>
+            {isError && <Alert type='error'>Sorry, something went wrong</Alert>}
+            {isSuccess && (
+              <Alert type='success'>Success! Thank you for your message</Alert>
+            )}
+          </AnimatePresence>
+
+          <button
+            type='submit'
+            disabled={isSubmitting}
+            className='btn  hover:opacity-75  py-3 text-base transition text-gray-100 bg-gray-800 disabled:opacity-50'
+          >
+            Submit
+          </button>
+        </motion.form>
+      </FormProvider>
+    </AnimateSharedLayout>
   )
 }
 

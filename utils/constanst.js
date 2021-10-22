@@ -57,13 +57,14 @@ const technologies = [
 ]
 
 const contactFormSchema = yup.object({
-  name: yup.string().required('required'),
+  name: yup.string().trim().required('required'),
   email: yup
     .string()
+    .trim()
     .email('Please provide valid email address')
     .required('required'),
-  title: yup.string().required('required'),
-  message: yup.string().required('required'),
+  title: yup.string().trim().required('required'),
+  message: yup.string().trim().required('required'),
 })
 
 export { socialLinks, navLinks, technologies, contactFormSchema }
