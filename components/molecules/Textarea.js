@@ -12,7 +12,7 @@ const Textarea = ({ name }) => {
       <textarea
         rows='2'
         {...register(name, { required: true })}
-        className={` peer input
+        className={` peer input resize-none
       ${errors[name] && 'border-red-400 focus:border-red-400'}`}
         placeholder={name}
       />

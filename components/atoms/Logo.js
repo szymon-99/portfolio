@@ -5,8 +5,8 @@ const Logo = ({ lg }) => {
     <div>
       <Link href='/'>
         <a
-          className={`text-xl font-thin bg-clip-text text-transparent bg-gradient-to-r from-black to-yellow-900 ${
-            lg && 'md:text-2xl'
+          className={`text-xl font-extralight bg-clip-text text-transparent bg-gradient-to-r from-black to-yellow-900 ${
+            lg && 'md:text-2xl '
           }`}
         >
           Szymon Prusak

@@ -20,7 +20,7 @@ const Navbar = () => {
       custom={2}
       initial='initial'
       animate='animate'
-      className='absolute inset-x-0 top-0 page-width h-16 flex items-center justify-between md:h-20 z-10 '
+      className='absolute inset-x-0 top-0 page-width h-16 flex items-center justify-between md:h-20 z-10'
     >
       <Logo lg />
 
@@ -32,7 +32,7 @@ const Navbar = () => {
             <a
               key={href}
               href={href}
-              className='text-lg transition  leading-none  text-gray-800 hover:text-yellow-500'
+              className=' text-base font-medium capitalize transition  leading-none  text-gray-800 hover:text-yellow-500'
             >
               {label}
             </a>
