@@ -24,6 +24,7 @@ const SEO = ({ pageTitle, image, description }) => {
       <meta name='twitter:image' content={seo.image} key='twimage' />
       <meta name='twitter:title' content={seo.title} key='twtitle' />
       <meta name='twitter:description' content={seo.description} key='twdesc' />
+      <meta name='twitter:card' content='summary_large_image' />
 
       {/* Open Graph */}
       <meta property='og:url' content={seo.url} key='ogurl' />
