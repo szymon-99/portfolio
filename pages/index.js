@@ -4,6 +4,7 @@ import {
   Portfolio,
   Contact,
   Layout,
+  SEO,
 } from '../components/templates'
 import { getPortfolioData } from '../utils/api'
 
@@ -11,6 +12,7 @@ export default function Home({ projects }) {
   return (
     <>
       <Layout>
+        <SEO />
         <Hero />
         <About />
         <Portfolio projects={projects} />

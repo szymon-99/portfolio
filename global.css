@@ -39,7 +39,7 @@
     @apply inline-block px-4 py-2 md:px-6 font-semibold text-xs md:text-sm uppercase rounded transition  focus-visible:ring-2 focus-visible:ring-yellow-500 outline-none;
   }
   .input {
-    @apply w-full outline-none  py-1 pl-2  bg-transparent  border-b-[3px] transition-colors border-gray-500 focus:border-gray-800 placeholder-transparent;
+    @apply w-full outline-none  py-1 pl-2  bg-transparent  border-b-[3px] transition-colors border-gray-400 focus:border-gray-800 placeholder-transparent;
   }
   .label {
     @apply duration-200  absolute transition 

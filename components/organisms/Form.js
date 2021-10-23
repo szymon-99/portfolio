@@ -57,7 +57,7 @@ const Form = () => {
         <motion.form
           layout
           onSubmit={handleSubmit(submitHandler)}
-          className='grid gap-10 max-w-[26rem] rounded w-full p-8 lg:p-12 shadow-md  bg-gray-300/10'
+          className='grid gap-10 max-w-[26rem] rounded w-full p-8 lg:p-12 shadow-md  bg-gray-200/10 backdrop-blur-sm'
         >
           <Input name='name' />
           <Input name='email' />
