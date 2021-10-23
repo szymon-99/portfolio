@@ -69,7 +69,7 @@ const Project = ({
             {category}
           </p>
 
-          <p>{intro}</p>
+          <p className=' lg:text-base'>{intro}</p>
         </div>
 
         <div>
