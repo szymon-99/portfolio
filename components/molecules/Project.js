@@ -17,7 +17,7 @@ const Project = ({
   intro,
   isOdd,
 }) => {
-  const { inView, ref } = useInView({ threshold: 0.4 })
+  const { inView, ref } = useInView({ threshold: 0.5 })
   const animationControls = useAnimation()
   const { file, description: alt } = image.fields
 
@@ -30,6 +30,7 @@ const Project = ({
       ref={ref}
       variants={isOdd ? slideLeft : slideRight}
       initial='initial'
+      custom={{ duration: 1.1 }}
       animate={animationControls}
       className='w-full max-w-xl lg:max-w-none
       flex flex-col lg:flex-row lg:odd:flex-row-reverse 

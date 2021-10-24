@@ -16,20 +16,28 @@ const scaleY = {
 }
 
 const slideLeft = {
-  initial: { x: -30, opacity: 0 },
-  animate: (delay = 0) => ({
+  initial: { x: -50, opacity: 0 },
+  animate: ({ delay, duration }) => ({
     x: 0,
     opacity: 1,
-    transition: { ...springTransition, delay },
+    transition: {
+      type: 'spring',
+      duration: duration || 0.9,
+      delay: delay || 0,
+    },
   }),
 }
 
 const slideRight = {
-  initial: { x: 30, opacity: 0 },
-  animate: (delay = 0) => ({
+  initial: { x: 50, opacity: 0 },
+  animate: ({ delay, duration }) => ({
     x: 0,
     opacity: 1,
-    transition: { ...springTransition, delay },
+    transition: {
+      type: 'spring',
+      delay: delay || 0,
+      duration: duration || 0.9,
+    },
   }),
 }
 

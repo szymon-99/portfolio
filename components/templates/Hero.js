@@ -11,7 +11,7 @@ const Hero = () => {
 
       <motion.div
         variants={slideLeft}
-        custom={0.4}
+        custom={{ delay: 0.5 }}
         initial='initial'
         animate='animate'
         className='flex flex-col justify-center md:justify-end md:pb-8 lg:pb-0'
@@ -44,7 +44,7 @@ const Hero = () => {
         variants={slideRight}
         initial='initial'
         animate='animate'
-        custom={0.5}
+        custom={{ delay: 0.6 }}
         className='relative w-5/6 sm:w-3/4 h-full lg:w-[55%] justify-self-end'
       >
         <NextImage src='/hero-img.svg' layout='fill' />
