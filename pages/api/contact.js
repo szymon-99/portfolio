@@ -1,12 +1,13 @@
-require('dotenv').config()
+import nodemailer from 'nodemailer'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export default async function handler(req, res) {
   const { name, title, message, email } = req.body
   if (!name || !title || !message || !email) {
     return res.status(404).send('All fields required')
   }
-
-  let nodemailer = require('nodemailer')
 
   const transporter = nodemailer.createTransport({
     port: 465,
@@ -35,7 +36,6 @@ export default async function handler(req, res) {
 
     res.status(200).send('success')
   } catch (error) {
-    console.log(error)
-    res.status(404).send('error')
+    res.status(404).send(error)
   }
 }
